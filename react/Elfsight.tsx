@@ -6,7 +6,7 @@ interface Props {
 
 const Elfsight: FC<Props> = ({ appId }) => {
   if (!appId) {
-    return <></>
+    return null
   }
 
   return <div className={`elfsight-app-${appId}`} />

@@ -18,7 +18,7 @@ Elfsight widgets help 300,000+ website owners to increase sales, engage visitors
 
 ```json
 "dependencies": {
-  "vtex.elfsight": "0.x"
+  "vtex.elfsight": "1.x"
 }
 ```
 

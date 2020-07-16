@@ -1,6 +1,6 @@
-📢 Use this project, [contribute](https://github.com/vtex-apps/CHANGEME) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
+📢 Use this project, [contribute](https://github.com/vtex-apps/elfsight) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
-# APP NAME
+# Elfsight
 
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -8,42 +8,54 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
-Under the app's name, you should explain the topic, giving a **brief description** of the **app's functionality** (what is it for?) in a store.
+Elfsight first party integration app. The [solution](https://elfsight.com/) provides widgets that help website owners to increase sales, engage visitors, collect leads and more.
 
-Next, you can **add media** (either an image of a GIF) if possible, so that users can better understand how the app works in practice. 
+![image](https://user-images.githubusercontent.com/284515/87573824-dbee0700-c6a3-11ea-9ca2-0f03809b785b.png)
 
-![Media Placeholder](https://user-images.githubusercontent.com/52087100/71204177-42ca4f80-227e-11ea-89e6-e92e65370c69.png)
+## Configuration 
 
-## Configuration
+1. Adding the app as a theme dependency in the `manifest.json` file;
 
-It is possible to install in your store either by using App Store or the VTEX IO Toolbelt.
+```json
+"dependencies": {
+  "vtex.elfsight": "1.x"
+}
+```
 
-### Using VTEX App Store
+2. Add the block `elfsight`, responsible for rendering your Elfsight widget, to your theme `blocks.json` file. Notice: the block can be added to any page template you want. 
+3. Declare in it the prop `appId` whose value must be the app ID of the widget provided by Elfsight. For example:
 
-1. Access the **Apps** section in your account's admin page and look for the Icommkt box;
-2. Then, click on the **Install** button;
-3. You'll see a warning message about needing to enter the necessary configurations. Scroll down and type in your **NAME OF A SETTINGS FIELD** in the `NAME OF THE APP` field.
-4. Click on **Save**.
 
-### Using VTEX IO Toolbelt
+```diff
+   "footer-layout.desktop": {
+     "children": [
++      "elfsight#foobar"
+     ]
+   },
 
-1. [Install](https://vtex.io/docs/recipes/development/installing-an-app/) the `vtex.icommkt@0.x` app. You can confirm that the app has now been installed by running `vtex ls` again. 
-2. Access the **Apps** section in your account's admin page and look for the NAME OF THE APP box. Once you find it, click on the box.
-3. Fill in the `NAME OF THE APP` field with your **NAME OF THE SETTINGS FIELD**.
-4. Click on **Save**.
++  "elfsight#foobar": {
++    "props": {
++      "appId": "4a13d81d-20f3-4661-b472-9de777efe3ed"
++    }
++  }
+```
 
-<!-- Remember to also **showcase any necessary disclaimer** related to the app in this section, such as the different behavior it may display during its configuration. -->
+### `elfsight` props
 
-## Modus Operandi *(not mandatory)*
+| Prop name    | Type            | Description    | Default value                                                                                                                               |
+| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
+| `appId`      | `string`       | The app ID of the widget provided by Elfsight. The format should be as follows: `XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX`.      | `undefined`        |
 
-There are scenarios in which an app can behave differently in a store, according to its configuration. It's crucial then to go through these **behavioral changes** in this section, allowing users to fully understand the **practical application** of the app in their store.
+You should get the app ID from the Elfsight admin:
 
-If you feel compelled to give further details, such as the app's **relationship with others**, don't hesitate to use this section. 
+![App Id](https://user-images.githubusercontent.com/284515/87574775-3d62a580-c6a5-11ea-8278-3090254b16af.png)
+
 
 <!-- DOCS-IGNORE:start -->
+
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -53,4 +65,5 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
+
 <!-- DOCS-IGNORE:end -->

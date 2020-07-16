@@ -44,9 +44,9 @@ Example:
 
 | Prop name    | Type            | Description    | Default value                                                                                                                               |
 | ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
-| `appId`      | `string`       | The app id of the widget provided by the Elfsight in the format of: `XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX`.          | ``        |
+| `appId`      | `string`       | The app ID of the widget provided by Elfsight. The format should be as follows: `XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX`.      | `undefined`        |
 
-You can get the app id from the Elfsight admin:
+You should get the app ID from the Elfsight admin:
 
 ![App Id](https://user-images.githubusercontent.com/284515/87574775-3d62a580-c6a5-11ea-8278-3090254b16af.png)
 

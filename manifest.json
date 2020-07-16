@@ -1,7 +1,7 @@
 {
   "name": "elfsight",
   "vendor": "vtex",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "title": "Elfsight",
   "description": "Elfsight widgets help 300,000+ website owners to increase sales, engage visitors, collect leads and more.",
   "builders": {

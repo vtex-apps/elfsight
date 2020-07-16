@@ -8,7 +8,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
-Elfsight widgets help 300,000+ website owners to increase sales, engage visitors, collect leads and more.
+Elfsight first party integration app. The [solution](https://elfsight.com/) provides widgets that help website owners to increase sales, engage visitors, collect leads and more.
 
 ![image](https://user-images.githubusercontent.com/284515/87573824-dbee0700-c6a3-11ea-9ca2-0f03809b785b.png)
 
@@ -22,9 +22,9 @@ Elfsight widgets help 300,000+ website owners to increase sales, engage visitors
 }
 ```
 
-2. Add the block `elfsight` to your theme `blocks.json` passing the prop `appId`.
+2. Add the block `elfsight`, responsible for rendering your Elfsight widget, to your theme `blocks.json` file. Notice: the block can be added to any page template you want. 
+3. Declare in it the prop `appId` whose value must be the app ID of the widget provided by Elfsight. For example:
 
-Example:
 
 ```diff
    "footer-layout.desktop": {
